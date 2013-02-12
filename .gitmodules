@@ -1,0 +1,3 @@
+[submodule "forcedotcom"]
+	path = forcedotcom
+	url = https://github.com/ejholmes/vim-forcedotcom.git
