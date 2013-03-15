@@ -52,7 +52,9 @@ endfunction
 "let g:NERDTreeDirArrows=0
 
 " Color scheme
-:color Tomorrow-Night-Eighties
+:color default
+":color smyck
+":color Tomorrow-Night-Eighties
 ":color railscasts2
 
 " Open and close NERDTree automatically
@@ -68,4 +70,10 @@ set softtabstop=2
 set shiftwidth=2
 set noexpandtab
 
+" indentLevel
+let g:indentLine_color_term='235'
+let g:indentLine_char='│'
+let g:indentLine_showFirstIndentLevel=1
+hi SpecialKey ctermfg=235
+set list lcs=tab:\│\ 
 
