@@ -52,7 +52,8 @@ endfunction
 "let g:NERDTreeDirArrows=0
 
 " Color scheme
-":color desert
+:color Tomorrow-Night-Eighties
+":color railscasts2
 
 " Open and close NERDTree automatically
 "autocmd vimenter * NERDTree
