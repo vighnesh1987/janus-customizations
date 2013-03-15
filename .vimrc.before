@@ -1,3 +1,4 @@
 let mapleader = ","
-" call janus#disable_plugin('ctrlp')
+call janus#disable_plugin('vim-indent-guides')
+call janus#disable_plugin('forcedotcom')
 
