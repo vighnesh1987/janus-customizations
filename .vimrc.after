@@ -36,30 +36,6 @@ vnoremap > >gv
 :hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 :nnoremap <Leader>hc :set cursorline! cursorcolumn!<CR>
 
-" ==== Add current directory to statusline ===
-set statusline+=\ [%{CurDir()}]          " current dir
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/Rege/Dropbox/Courses/Spr12/CS142/Sites', "sites", "g")
-    let curdir = substitute(curdir, '/Users/Rege/Dropbox/Courses/Sum12', "sum12", "g")
-    let curdir = substitute(curdir, '/Users/Rege/Dropbox', "dropbox", "g")
-    let curdir = substitute(curdir, '/Users/Rege', "~", "g")
-    return curdir
-endfunction
-
-"Fix for NERDTree
-" NOT NEEDED with MacVim
-"http://stackoverflow.com/questions/8753286/nerd-tree-enter-does-not-open-sub-dirs?lq=1
-"let g:NERDTreeDirArrows=0
-
-" Color scheme
-:color default
-":color smyck
-":color Tomorrow-Night-Eighties
-":color railscasts2
-
-" Open and close NERDTree automatically
-"autocmd vimenter * NERDTree
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " color syntax for ejs files
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -68,7 +44,37 @@ au BufNewFile,BufRead *.ejs set filetype=html
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set noexpandtab
+set expandtab
+
+" Match tags
+runtime macros/matchit.vim
+"------------------------------------------------------------ Status line
+set statusline+=\ [%{CurDir()}]          " current dir
+function! CurDir()
+  let curdir = substitute(getcwd(), '/Users/Rege/Dropbox/Courses/Spr12/CS142/Sites', "sites", "g")
+  let curdir = substitute(curdir, '/Users/Rege/Dropbox/Courses/Sum12', "sum12", "g")
+  let curdir = substitute(curdir, '/Users/Rege/Dropbox', "dropbox", "g")
+  let curdir = substitute(curdir, '/Users/Rege', "~", "g")
+  return curdir
+endfunction
+
+"----------------------------------------------------------- Function key mappings
+" syntax highlighting toggle
+:map <F7> :if exists("g:syntax_on") <Bar>
+		\   syntax off <Bar>
+		\ else <Bar>
+		\   syntax enable <Bar>
+		\ endif <CR>
+
+:map <F3> :noh<CR>
+
+"-------------------------------------------------------------- Font and colors
+":color railscasts
+":color Tomorrow-Night-Bright
+:color default
+":color smyck
+":color Tomorrow-Night-Eighties
+":color railscasts2
 
 " indentLevel
 let g:indentLine_color_term='235'
@@ -76,4 +82,3 @@ let g:indentLine_char='│'
 let g:indentLine_showFirstIndentLevel=1
 hi SpecialKey ctermfg=235
 set list lcs=tab:\│\ 
-
