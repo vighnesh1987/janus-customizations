@@ -82,3 +82,5 @@ let g:indentLine_char='│'
 let g:indentLine_showFirstIndentLevel=1
 hi SpecialKey ctermfg=235
 set list lcs=tab:\│\ 
+
+
