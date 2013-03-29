@@ -1,3 +1,2 @@
 let mapleader = ","
-call janus#disable_plugin('vim-indent-guides')
 
