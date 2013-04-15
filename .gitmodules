@@ -10,3 +10,6 @@
 [submodule "Align"]
 	path = Align
 	url = https://github.com/vim-scripts/Align.git
+[submodule "YankRing.vim"]
+	path = YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim.git

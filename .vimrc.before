@@ -1,4 +1,4 @@
 let mapleader = ","
 call janus#disable_plugin('css-color')
-call janus#disable_plugin('snipMate')
+call janus#disable_plugin('snipmate')
 
