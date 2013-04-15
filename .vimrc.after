@@ -84,3 +84,5 @@ hi SpecialKey ctermfg=235
 set list lcs=tab:\│\ 
 
 
+:map <F2> :%s/\t/  /gc<CR>
+
